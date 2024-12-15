@@ -82,7 +82,7 @@ int main(int argc, char** argv) {
     double* local_coordp1x = NULL, * local_coordp2x = NULL, * local_coordp1y = NULL, * local_coordp2y = NULL;
 
     if (rank == 0) {
-        FILE* f = fopen("/home/berilo/scripts_CAD/my_points_fat.txt", "r");
+        FILE* f = fopen("my_points_test.txt", "r");
 
         double temp;
         while (fscanf(f, "%lf", &temp) != EOF) {
@@ -177,4 +177,3 @@ int main(int argc, char** argv) {
     MPI_Finalize();
     return 0;
 }
-
